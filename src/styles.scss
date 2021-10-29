@@ -1,1 +1,101 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-size: 20px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.background-dots {
+  background-image: url("assets/dots.png");
+  opacity: .04;
+  background-size: cover;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  pointer-events: none;
+	animation: dots 15s infinite;
+}
+.background-overlay {
+  background-image: linear-gradient(#fafafa, white);
+  position: fixed;
+  top: 0;
+  left: 10vw;
+  height: 200vh;
+  width: 100vw;
+  border-radius: 55% 0;
+  opacity: 0.6;
+  z-index: -1;
+	animation: dots-overlay 30s infinite;
+}
+
+@keyframes dots-overlay {
+	0% {
+        opacity: 0.4;
+        transform: scale(1);
+	}
+
+    50% {
+        opacity: .75;
+        transform: scale(1.05);
+    }
+
+	100% {
+        opacity: .4;
+        transform: scale(1);
+	}
+}
+
+@keyframes dots {
+	0% {
+        opacity: 0.02;
+	}
+
+    50% {
+        opacity: .075;
+    }
+
+	100% {
+        opacity: .02;
+	}
+}
+
+html, body { height: 100%; }
+
+@mixin color-checkbox($color) {
+  .mat-ripple-element {
+    background: $color !important;
+  }
+  &.mat-checkbox-checked {
+    .mat-checkbox-background {
+      background: $color !important;
+    }
+  }
+  .mat-radio-inner-circle {
+    background: $color !important;
+  }
+  &.mat-radio-checked {
+    .mat-radio-outer-circle {
+      border-color: $color !important;
+    }
+  }
+}
+
+.merge-map {
+  @include color-checkbox(green);
+}
+.switch-map {
+  @include color-checkbox(red);
+}
+.exhaust-map {
+  @include color-checkbox(blue);
+}
+.concat-map {
+  @include color-checkbox(purple);
+}

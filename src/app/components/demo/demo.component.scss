@@ -1,0 +1,8 @@
+$pulseSize: 32px;
+
+:host {
+    display: block;
+    height: $pulseSize * 2;
+    width: 100%;
+    margin: $pulseSize 0;
+}

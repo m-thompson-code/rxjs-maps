@@ -1,0 +1,49 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 100%;
+    width: 100%;
+}
+.text {
+    pointer-events: none;
+}
+.checkboxes {
+    padding: 16px 0;
+}
+
+.global-pulses {
+    position: fixed;
+}
+
+.demo-wrapper {
+    display: block;
+    min-height: 256px;
+    width: 400px;
+    max-width: 80vw;
+}
+.click-form {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 12px;
+    opacity: .1;
+}
+.click-form:hover {
+    opacity: 1;
+}
+button {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 12px;
+    opacity: .1;
+}
+button:hover {
+    opacity: 1;
+}
+mat-checkbox, mat-radio-button {
+    padding: 4px;
+}
