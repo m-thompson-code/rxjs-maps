@@ -12,5 +12,5 @@ export interface Pulse {
     styleUrls: ['./pulses.component.scss']
 })
 export class PulsesComponent {
-    @Input() pulses!: Pulse[];
+    @Input() pulses: Pulse[] = [];
 }
